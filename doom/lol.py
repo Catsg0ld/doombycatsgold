@@ -45,7 +45,6 @@ def raycasting():
                 depth *= math.cos(player_angle - angle)
                 wall_height = min(int(HEIGHT / (depth * 0.01)), HEIGHT)
 
-                # Затемнение стены в зависимости от расстояния
                 shade_factor = max(0.2, 1 - depth / MAX_DEPTH)
                 color = (
                     int(BLUE[0] * shade_factor),
